@@ -1,38 +1,16 @@
-# Implementing-Skip-gram-Word-Embeddings-in-PyTorch
-Overview:
-This notebook demonstrates the process of creating a skip-gram word embedding model using PyTorch. The skip-gram model aims to predict the context words (neighbors) of a given target word from the corpus. After training, the model's weight matrix can be used as word embeddings.
-
-# Components:
-# Imports:
-PyTorch for neural networks
-NLTK for text preprocessing
-Scikit-learn for SVD and cosine similarity
-Pandas and matplotlib for data handling and visualization
-# Preprocessing:
-
-Remove stopwords using NLTK's list.
-Convert "-ing" verbs to their base forms using regex.
-Tokenize the corpus.
-# Vocabulary Creation:
-
-Create a vocabulary dictionary where each unique word in the corpus is assigned a unique integer ID.
-# Neighbor Set Preparation:
-
-For each word in the corpus, identify its neighboring words. The number of neighbors can be defined by the n_gram parameter.
-# Model Definition:
-
-A basic two-layer linear model with no biases. The hidden layer represents the embeddings.
-Training:
-
-The model is trained using CrossEntropyLoss.
-Gradient descent is used to update the weights.
-# Visualization:
-
-Use TruncatedSVD from Scikit-learn to reduce the dimensionality of the embeddings to 2D.
-Plot the 2D embeddings using seaborn.
-# Cosine Similarity:
-
-Check the similarity between two word embeddings in both the original 4D space and the 2D space after SVD.
-
-# Conclusion:
-This notebook provides a basic understanding of how to create and visualize skip-gram word embeddings in PyTorch.
+# Sentiment_Analysis_using_LSTM
+This repository houses the implementation and results of a sentiment analysis project, using a deep learning model built with PyTorch, on a dataset of 50,000 product reviews.
+#  Overview
+The primary goal of this project is to determine the sentiment (positive or negative) behind a given product review. The model processes tokenized review data, training on a subset, to make accurate predictions on unseen data.
+# Technologies
+Python: The primary programming language for the project.
+PyTorch: Deep learning framework used for model creation, training, and testing.
+# Dataset Overview
+Total Reviews: 50,000
+Training Set: 40,000 reviews
+Testing Set: 10,000 reviews
+Vocabulary Size: 83,942 unique words
+Average Review Length: 126 tokens
+# Results
+Best Training Accuracy: 88.11%
+Best Testing Accuracy: 86.32%
